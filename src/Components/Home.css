@@ -1,7 +1,7 @@
 .home {
   background-color: whitesmoke;
   width: 100%;
-  height: 86vh;
+  height: 87vh;
   padding: 10rem;
   display: flex;
   justify-content: space-between;
@@ -33,17 +33,6 @@
   font-weight: 500;
 }
 
-.home__form > button {
-  border: none;
-  padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  font-size: 1.7rem;
-  font-weight: 500;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .home__weatherContent {
   width: 70%;
   height: 20rem;
@@ -53,6 +42,9 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
+  border-radius: 5px;
+
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .home__weatherContent .city {
@@ -90,7 +82,7 @@
 }
 
 .cloud-color {
-  color: #f1f2f6;
+  color: #e9ebf0;
 }
 
 .fa-sun {
@@ -99,4 +91,16 @@
 
 .fa-cloud-rain {
   color: #a4b0ea;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: fit-content;
+  }
+  .home__right > img {
+    height: 30rem;
+    max-width: 98%;
+  }
 }

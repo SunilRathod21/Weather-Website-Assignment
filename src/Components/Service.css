@@ -1,6 +1,6 @@
 .service {
   width: 100%;
-  height: 86vh;
+  height: 87vh;
   background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
@@ -21,8 +21,24 @@
 .service__left > p {
   font-size: 1.5rem;
   color: gray;
+  margin-bottom: 1rem;
 }
 
 .service__right > img {
   height: 40rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .service {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+  }
+
+  .service__right > img {
+    height: 30rem;
+    width: 98%;
+  }
+  .service__left {
+    width: 40rem;
+  }
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Home.css";
-
+import "./style.css";
+import WEATHER_API_KEY from "../API";
 const Home = () => {
   const [data, setData] = useState(null);
   const [inputCity, setInputCity] = useState("");
@@ -13,7 +14,7 @@ const Home = () => {
     }
 
     const res = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=414cfb58cb31f1298951391dca9e072b`
+      `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${WEATHER_API_KEY}`
     );
 
     setData(res.data);
@@ -43,7 +44,7 @@ const Home = () => {
             placeholder="Enter city name"
             required
           />
-          <button type="submit" onClick={getWeather}>
+          <button className="btn__primary" type="submit" onClick={getWeather}>
             Get weather
           </button>
         </form>

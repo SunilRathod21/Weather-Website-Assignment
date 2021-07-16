@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 .nav {
+  position: relative;
   width: 100%;
-  height: 6rem;
+  height: 5.9rem;
   background-color: #000;
   color: white;
   display: flex;
@@ -64,11 +65,60 @@
   margin-right: 3rem;
 }
 
-.navbar-toggler-icon,
-.navbar-toggler {
-  color: white !important;
+.hamburger__icon {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  display: none;
+  z-index: 1000;
+  color: white;
+  padding-right: 1rem;
+  font-size: 2rem;
 }
 
-.navbar-toggler * {
-  color: white !important;
+@media only screen and (max-width: 768px) {
+  .nav {
+    padding-top: 1.5rem;
+  }
+  .hamburger__icon {
+    display: block;
+  }
+
+  .nav__links {
+    position: fixed;
+    background: #000;
+
+    height: 100vh;
+    width: 100%;
+    top: 0.5rem;
+    right: 0;
+
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    align-content: center;
+
+    clip-path: circle(2rem at 90% -10%);
+    -webkit-clip-path: circle(2rem at 90% -10%);
+    transition: all 1s ease-out;
+  }
+
+  .nav__links > * {
+    margin-bottom: 5rem !important;
+  }
+
+  .nav__links.open {
+    clip-path: circle(100rem at 90% -10%);
+    -webkit-clip-path: circle(100rem at 90% -10%);
+  }
+}
+.header__logo img {
+  height: 8rem;
+  object-fit: contain;
+}
+.header__logo {
+  width: 25%;
 }

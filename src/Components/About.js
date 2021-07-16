@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./About.css";
+import "./style.css";
 const About = () => {
   return (
     <div className="about">
@@ -14,6 +16,9 @@ const About = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum
         </p>
+        <Link className="btn__secondary" to="/about">
+          Read More &rarr;
+        </Link>
       </div>
       <div className="about__right">
         <img src="About.svg" alt="About" />

@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Contact.css";
+import "./style.css";
+
 const Contact = () => {
   return (
     <div className="contact">
@@ -14,6 +17,9 @@ const Contact = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum
         </p>
+        <Link className="btn__secondary" to="/contact">
+          Read More &rarr;
+        </Link>
       </div>
       <div className="contact__right">
         <form>
@@ -30,7 +36,7 @@ const Contact = () => {
             <label>Message</label>
             <textarea type="text" required rows="4"></textarea>
           </div>
-          <button>Submit</button>
+          <button className="btn__primary">Submit</button>
         </form>
       </div>
     </div>
