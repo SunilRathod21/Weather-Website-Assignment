@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Home.css";
 import "./style.css";
-import WEATHER_API_KEY from "../API";
+// import WEATHER_API_KEY from "../API";
 const Home = () => {
   const [data, setData] = useState(null);
   const [inputCity, setInputCity] = useState("");
@@ -12,7 +12,7 @@ const Home = () => {
     if (e) {
       e.preventDefault();
     }
-
+    const WEATHER_API_KEY = "414cfb58cb31f1298951391dca9e072b";
     const res = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${WEATHER_API_KEY}`
     );
